@@ -5,15 +5,15 @@ import com.inventorymanagement.test.model.Customer
 import org.springframework.stereotype.Service
 
 @Service("customerService")
-class CustomerService(val dataBase: CustomerRepository) {
+class CustomerService(val database: CustomerRepository) {
 
     fun getAllCustomers(): List<Customer> {
-       return dataBase.findAll()
+       return database.findAll()
     }
 
-    fun getCustomerByID(id: String): Customer? = dataBase.getCustomerByID(id)
+    fun getCustomerByID(id: String): Customer? = database.getCustomerByID(id)
 
     fun createCustomer(customer: Customer) {
-        dataBase.save(customer)
+        database.save(customer)
     }
 }
