@@ -1,5 +1,6 @@
 #Ignore any .env files
-.env
+*.env
+*.properties
 
 HELP.md
 .gradle
