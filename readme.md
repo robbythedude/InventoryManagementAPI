@@ -18,3 +18,9 @@ Project created for learning purposes.
 1. Modify `application.properties.template` file to match previous settings for MongoDB setup
 2. Rename to `application.properties`
 3. Run `./gradlew bootBuildImage` to create Docker Image
+
+## Docker
+
+1. Run `docker-compose` command
+2. Verify Mongo-Express is accessible via browser
+3. Verify Kotlin Backend via Postman
