@@ -31,6 +31,16 @@ services:
     ports:
       - 8081:8081
     restart: unless-stopped
+  test:
+    image: test:0.0.1-SNAPSHOT
+    container_name: kotlin-api
+    depends_on:
+      - mongodb
+    networks:
+      - mongodb_network
+    ports:
+      - 8080:8080
+    restart: unless-stopped
 volumes:
   mongodb-data:
     name: mongodb-data
